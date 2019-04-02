@@ -1,15 +1,18 @@
 {
-  "name": "avgsampler",
+  "name": "average-sampler",
   "version": "1.0.0",
-  "description": "",
+  "description": "Gets the average color of an image.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0"
-  }
+  "keywords": [
+    "average",
+    "sampler",
+    "color",
+    "image",
+    "canvas"
+  ],
+  "author": "rouzbehhz",
+  "license": "MIT"
 }
