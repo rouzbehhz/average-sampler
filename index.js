@@ -1,10 +1,12 @@
-export default async function averageColor(img) {
+// MIT License - Copyright (c) 2018 Rouzbeh Hz (rouzbehhz.com) //
+
+const averageColor = async img => {
   if (img === null || img === undefined) {
     return {
-      hexCode: null,
-      rgbArray: null,
-      rgbObj: null,
-      rgbString: null
+      hex: null,
+      rgb: null,
+      rgbArr: null,
+      rgbObj: null
     };
   }
   let canvas = document.createElement("canvas"), // Create canvas
@@ -45,22 +47,22 @@ export default async function averageColor(img) {
   color.rgbObj.b = ~~(color.rgbObj.b / count);
 
   // Set RGB as an Array in color Object
-  color.rgbArray = [color.rgbObj.r, color.rgbObj.g, color.rgbObj.b];
+  color.rgbArr = [color.rgbObj.r, color.rgbObj.g, color.rgbObj.b];
 
   // Set RGB as a String in color Object
-  color.rgbString = `rgb(${color.rgbObj.r},${color.rgbObj.g},${
-    color.rgbObj.b
-  })`;
+  color.rgb = `rgb(${color.rgbObj.r},${color.rgbObj.g},${color.rgbObj.b})`;
 
   // Set HEX code as a String in color Object
-  color.hexCode = color.rgbArray.map(x => {
+  color.hex = color.rgbArr.map(x => {
     // Convert RGB color values to a Base16 string
     x = parseInt(x).toString(16);
     // Add zero if only one character
     return x.length === 1 ? `0${x}` : x;
   });
-  color.hexCode = `#${color.hexCode.join("")}`;
+  color.hex = `#${color.hex.join("")}`;
 
   // Export color object
   return color;
-}
+};
+
+export default averageColor;

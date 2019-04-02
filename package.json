@@ -2,6 +2,7 @@
   "name": "average-sampler",
   "version": "1.0.0",
   "description": "Gets the average color of an image.",
+  "repository": "https://github.com/rouzbehhz/average-sampler",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
